@@ -27,8 +27,8 @@ class set_page_configuration:
     def __init__(self):
         st.set_page_config(page_title="Concrete Carbonation Classifier",
                         page_icon = "Images/icon.webp",
-                        layout="wide",
-                        initial_sidebar_state="expanded",
+                        layout="centered",
+                        initial_sidebar_state="auto",
                         menu_items={
         'Get Help': 'https://www.linkedin.com/in/jos%C3%A9-alberto-guzm%C3%A1n-torres-b4224372/',
         'Report a bug': "https://www.linkedin.com/in/jos%C3%A9-alberto-guzm%C3%A1n-torres-b4224372/",
