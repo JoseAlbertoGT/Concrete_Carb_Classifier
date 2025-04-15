@@ -47,7 +47,7 @@ def run_classifier(img):
 set_page_configuration()
 background("Images/side_bar_img.png")
 
-st.title(":green[Concrete Carbonation Classifier]" )
+st.title(":green[Concrete Carbonation Classifier]🧑‍🔬" )
 st.divider()
 
 lottie_animation = load_lottiefile("Gifs/Animation.json")
