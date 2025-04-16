@@ -67,6 +67,7 @@ with st.sidebar.expander(label=":orange[About]"):
 		</h5>
 """)
 
+# Contatc information
 with st.sidebar.expander(label=":orange[About the Author]"):
 	st.html("""<h5 style = 'text-align:center; color:black'>
 		Dr. José Alberto Guzmán Torres
@@ -74,9 +75,9 @@ with st.sidebar.expander(label=":orange[About the Author]"):
 		UMSNH-México
 		Civil Engineering Faculty <br>
 		Personal Profiles: </h5>""")
-	st.markdown("[:blue[ResearcGate]](https://www.researchgate.net/profile/Jose-Guzman-Torres)")
-	st.markdown("[:blue[Scholar Google]](https://scholar.google.com.mx/citations?user=lZA3PrIAAAAJ&hl=es&authuser=1)")
-	st.markdown("[:blue[Linkedin]](https://www.linkedin.com/in/jos%C3%A9-alberto-guzm%C3%A1n-torres-b4224372/)")
+	st.markdown("[:🧑‍🔬 blue[ResearcGate]](https://www.researchgate.net/profile/Jose-Guzman-Torres)")
+	st.markdown("📚 [:blue[Scholar Google]](https://scholar.google.com.mx/citations?user=lZA3PrIAAAAJ&hl=es&authuser=1)")
+	st.markdown("👷 [:blue[Linkedin]](https://www.linkedin.com/in/jos%C3%A9-alberto-guzm%C3%A1n-torres-b4224372/)")
 
 with st.sidebar.expander(label=":orange[Sponsors]"):
 	st.html("<a href=https://conahcyt.mx/ style='color:blue'> SECIHTI </a>")
