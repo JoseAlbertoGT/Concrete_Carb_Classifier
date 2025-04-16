@@ -33,7 +33,7 @@ def authenticate_user():
     if not st.session_state.authenticated:
         with st.sidebar:
             password = st.text_input("Enter access code:", type="password")
-            if password == "concrete2024":  # Simple example password
+            if password == "concrete2025":  # Simple password
                 st.session_state.authenticated = True
             elif password:
                 st.error("Invalid access code")
