@@ -95,14 +95,15 @@ with st.sidebar.expander(label=":orange[About the Author]"):
 		UMSNH-México
 		Civil Engineering Faculty <br>
 		Personal Profiles: </h5>""")
-	st.markdown("🧑‍🔬 [:blue[ResearcGate]](https://www.researchgate.net/profile/Jose-Guzman-Torres)")
+	st.markdown("🧑‍🔬 [:green[ResearcGate]](https://www.researchgate.net/profile/Jose-Guzman-Torres)")
 	st.markdown("📚 [:green[Scholar Google]](https://scholar.google.com.mx/citations?user=lZA3PrIAAAAJ&hl=es&authuser=1)")
-	st.markdown("👷 [:blue[Linkedin]](https://www.linkedin.com/in/jos%C3%A9-alberto-guzm%C3%A1n-torres-b4224372/)")
+	st.markdown("👷 [:green[Linkedin]](https://www.linkedin.com/in/jos%C3%A9-alberto-guzm%C3%A1n-torres-b4224372/)")
 
 with st.sidebar.expander(label=":orange[Sponsors]"):
-	st.html("<a href=https://conahcyt.mx/ style='color:blue'> SECIHTI </a>")
-	st.html("<a href=https://www.umich.mx/ style='color:blue'> UMSNH </a>")
-	st.html("<a href=https://conahcyt.mx/servicios-en-linea/sistema-snii/ style='color:blue'> Sistema SNII </a>")
+	st.markdown("[SECIHTI](https://conahcyt.mx/)")
+	st.markdown("[UMSNH](https://www.umich.mx/)")
+	st.markdown("[Sistema SNII](https://conahcyt.mx/servicios-en-linea/sistema-snii/)")
+	st.markdown("[SIIIA MATH](https://siiia.org/)")
 
 with st.sidebar.container():
 	st.image("Images/logo_siiia_b.png")
