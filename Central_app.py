@@ -144,33 +144,8 @@ with st.expander(label="Classify an image:"):
 				st.html("<h3 style='color:green'> Results: </h3>")
 				result_model_test = run_classifier(img=img_test)
 
-
-					# if option is not None:
-					# 	col1, col2, col3, = st.columns(3, vertical_alignment="center")
-					# 	with col2:
-					# 		st.image(image=option, caption="Testing image", use_container_width=True)
-					# if option is not None:
-					# 	img_test = load_image_tf(filename=option)
-					# 	st.html("<h3 style='color:green'> Results: </h3>")
-					# 	result_model_test = run_classifier(img=img_test)
-
-
 # -------------------- Space for dubugging in terminal -------------------- #
 
-
-# ------------------------------------------------------------------------- #
-# # Cargar Bootstrap desde un CDN (esto agregará las clases a tu documento)
-# st.markdown("""
-# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-# """, unsafe_allow_html=True)
-
-# st.html("""
-# 		<div class="container text-center">
-# 			<div class="d-flex justify-content-center align-items-center">
-# 				<img src="Images/Conahcyt.jpg" alt= "Conahcyt" class="footer-image">
-# 			</div>
-# 		</div>
-# """)
 st.html("<h5 style='text-align:center'> © Concrete Carbonation classifier. All rights reserved. </h5>")
 
 with st.container(height=200, border=False):
