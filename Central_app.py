@@ -138,10 +138,10 @@ with st.sidebar.expander(label=":orange[About the Author]"):
 	st.markdown("👷 [:green[Linkedin]](https://www.linkedin.com/in/jos%C3%A9-alberto-guzm%C3%A1n-torres-b4224372/)")
 
 with st.sidebar.expander(label=":orange[Sponsors]"):
-	st.markdown("[SECIHTI](https://conahcyt.mx/)")
-	st.markdown("[UMSNH](https://www.umich.mx/)")
-	st.markdown("[Sistema SNII](https://conahcyt.mx/servicios-en-linea/sistema-snii/)")
-	st.markdown("[SIIIA MATH](https://siiia.org/)")
+	st.markdown("[:green[SECIHTI]](https://conahcyt.mx/)")
+	st.markdown("[:green[UMSNH]](https://www.umich.mx/)")
+	st.markdown("[:green[Sistema SNII]](https://conahcyt.mx/servicios-en-linea/sistema-snii/)")
+	st.markdown("[:green[SIIIA MATH]](https://siiia.org/)")
 
 with st.sidebar.container():
 	st.image("Images/logo_siiia_b.png")
