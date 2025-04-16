@@ -74,7 +74,7 @@ with st.sidebar.expander(label=":orange[About the Author]"):
 		UMSNH-México
 		Civil Engineering Faculty <br>
 		Personal Profiles: </h5>""")
-	st.markdown("[ResearcGate](https://www.researchgate.net/profile/Jose-Guzman-Torres)")
+	st.markdown("[:red[ResearcGate]](https://www.researchgate.net/profile/Jose-Guzman-Torres)")
 
 		# 	<a href="https://www.researchgate.net/profile/Jose-Guzman-Torres" style="color:blue">
 		# ResearchGate <br>
