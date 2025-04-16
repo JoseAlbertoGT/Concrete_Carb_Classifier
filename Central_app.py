@@ -183,7 +183,7 @@ st.html("<h5 style='text-align:center'> © Concrete Carbonation classifier. All 
 with st.container(height=200, border=False):
 	col1, col2, col3 = st.columns(3,vertical_alignment="center", gap="small")
 	with col2:
-		col1, col2, col3= st.columns(3, vertical_alignment="center")
+		col1, col2, col3= st.columns(3, vertical_alignment="center", gap="medium")
 		with col1:
 			st.image(image="Images/logotipo_SCyT.svg", width=400, use_column_width=True)
 		with col2:		
