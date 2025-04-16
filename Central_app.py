@@ -73,17 +73,19 @@ with st.sidebar.expander(label=":orange[About the Author]"):
 		Posdoctoral Researcher
 		UMSNH-México
 		Civil Engineering Faculty <br>
-		Personal Profiles: </h5>
-			<a href="https://www.researchgate.net/profile/Jose-Guzman-Torres" style="color:blue">
-		ResearchGate <br>
-			</a>
-			<a href="https://scholar.google.com.mx/citations?user=lZA3PrIAAAAJ&hl=es&authuser=1" style="color:blue">
-		Schoolar Google <br>
-			</a>
-			<a href="https://www.linkedin.com/in/jos%C3%A9-alberto-guzm%C3%A1n-torres-b4224372/" style="color:blue">
-			Linkedin <br>
-			</a>
-		""")
+		Personal Profiles: </h5>""")
+	st.markdown("[ResearcGate](https://www.researchgate.net/profile/Jose-Guzman-Torres)")
+
+		# 	<a href="https://www.researchgate.net/profile/Jose-Guzman-Torres" style="color:blue">
+		# ResearchGate <br>
+		# 	</a>
+		# 	<a href="https://scholar.google.com.mx/citations?user=lZA3PrIAAAAJ&hl=es&authuser=1" style="color:blue">
+		# Schoolar Google <br>
+		# 	</a>
+		# 	<a href="https://www.linkedin.com/in/jos%C3%A9-alberto-guzm%C3%A1n-torres-b4224372/" style="color:blue">
+		# 	Linkedin <br>
+		# 	</a>
+		# """)
 
 with st.sidebar.expander(label=":orange[Sponsors]"):
 	st.html("<a href=https://conahcyt.mx/ style='color:blue'> SECIHTI </a>")
