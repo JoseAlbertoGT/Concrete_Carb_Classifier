@@ -47,20 +47,22 @@ def run_classifier(img):
 set_page_configuration()
 background("Images/side_bar_img.png")
 
-# # Hidding the hamburger button
-# hide_streamlit_style = """
-# <style>
-# #MainMenu {visibility: hidden;}
-# footer {visibility: hidden;}
-# header {visibility:hidden;}
-# </style>
-# """
-# st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+# Hidding the hamburger button
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility:hidden;}
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Hidding the Github button
 hide_github_icon = """
 <style>
 #GithubIcon {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility:hidden;}
 </style>
 """
 st.markdown(hide_github_icon, unsafe_allow_html=True)
