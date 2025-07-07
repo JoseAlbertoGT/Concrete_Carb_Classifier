@@ -140,7 +140,7 @@ with st.sidebar.expander(label=":orange[Sponsors]"):
 	st.markdown("[:green[SECIHTI]](https://conahcyt.mx/)")
 	st.markdown("[:green[UMSNH]](https://www.umich.mx/)")
 	st.markdown("[:green[Sistema SNII]](https://conahcyt.mx/servicios-en-linea/sistema-snii/)")
-	st.markdown("[:green[SIIIA MATH]](https://siiia.org/)")
+	st.markdown("[:green[SIIIA MATH]](https://siiia.com.mx/)")
 
 with st.sidebar.container():
 	st.image("Images/logo_siiia_b.png")
