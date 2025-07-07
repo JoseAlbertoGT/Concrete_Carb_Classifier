@@ -4,7 +4,6 @@
 # Libraries
 import tensorflow as tf
 import streamlit as st
-import numpy as np
 import os
 import platform
 from Utilities import set_page_configuration
