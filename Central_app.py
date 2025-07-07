@@ -69,11 +69,11 @@ def run_classifier(img):
         final_response = result[0][0]
         print(final_response)
         if final_response <= 0.22: # Here we define the Certainty of the model
-            st.write(":green[The concrete sample image has carbonation-free zones 🤖]")
-            st.write(f":green[The model's accuracy of this model for this image is:] :blue[{99.07}%]")
+            st.write(":green[The concrete sample image has carbonation-free zones]")
+            st.write(f":green[The model's accuracy of this model for this image is:] :blue[{99.07}%] 🤖")
         else:
-            st.write(":orange[The concrete sample image has damage of carbonation 🤖]")
-            st.write(f":orange[The model's accuracy of this model for this image is:] :blue[{99.07}%]")
+            st.write(":orange[The concrete sample image has damage of carbonation]")
+            st.write(f":orange[The model's accuracy of this model for this image is:] :blue[{99.07}%] 🤖")
 
         return result
     except Exception as e:
@@ -201,8 +201,8 @@ if authenticate_user():
                     
                     img_test = load_image_tf(filename=selected_image_path)
                 
-                    st.html("<h3 style='color:green'> Results: </h3>")
-                    result_model_test = run_classifier(img=img_test)
+                st.html("<h3 style='color:green'> Results: </h3>")
+                result_model_test = run_classifier(img=img_test)
 else:
     st.warning("Please enter access code to use the classifier")
 
