@@ -229,7 +229,7 @@ Interested in graduate research opportunities?
 
 <div align="center">
 
-**:star: ⭐ If this tool enhances your research or teaching, please ⭐ **star** this repository!
+⭐ If this tool enhances your research or teaching, please ⭐ this repository!
 </div>
 
 
