@@ -166,7 +166,11 @@ streamlit run Central_app.py
 
 1. **Guzmán-Torres, J. A.**, Domínguez-Mota, F. J., Tinoco-Guerrero, G., Tinoco-Ruíz, J. G., & Alonso-Guzmán, E. M. (2024). *Extreme fine-tuning and explainable AI model for non-destructive prediction of concrete compressive strength, the case of ConcreteXAI dataset.* **Advances in Engineering Software**, 192, 103630. [DOI: 10.1016/j.advengsoft.2024.103630](https://doi.org/10.1016/j.advengsoft.2024.103630)
 
-2. Guzmán-Torres, J. A., Domínguez-Mota, F. J., Alonso-Guzmán, E. M., Tinoco-Guerrero, G., & Martínez-Molina, W. (2024). ConcreteXAI: A multivariate dataset for concrete strength prediction via deep-learning-based methods. Data in Brief, 53, 110218. [DOI: 10.1016/j.dib.2024.110218](https://doi.org/10.1016/j.dib.2024.110218)
+2. Guzmán-Torres, J. A., Domínguez-Mota, F. J., Guzmán, E. A., Tinoco-Guerrero, G., & Tinoco-Ruíz, J. G. (2025). A digital twin approach based method in civil engineering for classification of salt damage in building evaluation. Mathematics and Computers in Simulation, 233, 433-447. [DOI: 10.1016/j.matcom.2025.02.003](https://doi.org/10.1016/j.matcom.2025.02.003)
+
+3. Guzmán-Torres, J. A., Domínguez-Mota, F. J., Tinoco-Guerrero, G., Román-Gutierrez, R., Arias-Rojas, H., & Naser, M. Z. (2024). Explainable computational intelligence method to evaluate the damage on concrete surfaces compared to traditional visual inspection techniques. In Interpretable Machine Learning for the Analysis, Design, Assessment, and Informed Decision Making for Civil Infrastructure (pp. 77-109). Woodhead Publishing. [DOI: 10.1016/B978-0-12-824073-1.00010-1](https://doi.org/10.1016/B978-0-12-824073-1.00010-1)
+
+4. Guzmán-Torres, J. A., Domínguez-Mota, F. J., Alonso-Guzmán, E. M., Tinoco-Guerrero, G., & Martínez-Molina, W. (2024). ConcreteXAI: A multivariate dataset for concrete strength prediction via deep-learning-based methods. Data in Brief, 53, 110218. [DOI: 10.1016/j.dib.2024.110218](https://doi.org/10.1016/j.dib.2024.110218)
 
 ---
 
