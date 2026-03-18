@@ -184,6 +184,7 @@ streamlit run Central_app.py
 - :classical_building: [Universidad Michoacana de San Nicolás de Hidalgo](http://www.umich.mx)
 - :microscope: Applied Mathematics & Scientific Computing
 - :email: jose.gerardo.tinoco@umich.mx
+- :globe_with_meridians: [ORCID](https://orcid.org/0000-0002-0866-4798)
 
 </td>
 <td width="33%">
@@ -194,6 +195,7 @@ streamlit run Central_app.py
 - :classical_building: [Universidad Michoacana de San Nicolás de Hidalgo](http://www.umich.mx)
 - :microscope: Civil Engineering & Materials Science
 - :email: elia.alonso@umich.mx
+- :globe_with_meridians: [ORCID](https://orcid.org/0000-0002-8502-4313)
 
 </td>
 <td width="33%">
@@ -204,6 +206,7 @@ streamlit run Central_app.py
 - :classical_building: [Universidad Michoacana de San Nicolás de Hidalgo](http://www.umich.mx)
 - :microscope: Computer Science & Data Analysis
 - :email: heriberto.arias@umich.mx
+- :globe_with_meridians: [ORCID](https://orcid.org/0000-0002-7641-8310)
 
 </td>
 </tr>
