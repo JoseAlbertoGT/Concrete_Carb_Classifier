@@ -15,6 +15,21 @@ Concrete Carbonation Classifier is a next-generation Streamlit web application t
 
 </div>
 
+## 📋 Table of Contents
+
+- [Key Features](#-key-features)
+- [Project Architecture](#-project-architecture)
+- [Technical Specifications](#-technical-specifications)
+- [Installation & Setup](#-installation--setup)
+- [Methodology & Algorithms](#-methodology--algorithms)
+- [Research Team](#-research-team)
+- [Scientific References](#-scientific-references)
+- [Citation](#-citation)
+- [Contributing](#-contributing)
+- [Acknowledgments](#-acknowledgments)
+- [License](#-license)
+- [Contact & Support](#-contact--support)
+
 ## ⚙️ Key Features  
 
 - **🚀 Real-Time Classification**  
@@ -129,6 +144,7 @@ streamlit run Central_app.py
 <td width="33%">
 
 **Dr. José Alberto Guzmán Torres** :mexico:
+<img src="Public/docs/Images/JAGT1.jpg" width="100%">
 - :office: [SIIIA MATH: Soluciones en ingeniería](http://www.siiia.com.mx)
 - :classical_building: [Universidad Michoacana de San Nicolás de Hidalgo](http://www.umich.mx)
 - :microscope: Engineering applications & Artificial Intelligence
@@ -139,6 +155,7 @@ streamlit run Central_app.py
 <td width="33%">
 
 **Dr. Francisco Javier Domínguez Mota** :mexico:
+<img src="Public/docs/Images/FJDM1.jpg" width="100%">
 - :office: [SIIIA MATH: Soluciones en ingeniería](http://www.siiia.com.mx)
 - :classical_building: [Universidad Michoacana de San Nicolás de Hidalgo](http://www.umich.mx)
 - :microscope: Applied Mathematics & Finite Difference Methods
@@ -149,11 +166,44 @@ streamlit run Central_app.py
 <td width="33%">
 
 **Dr. Gerardo Tinoco Guerrero** :mexico:
+<img src="Public/docs/Images/GTG.jpg" width="100%">
 - :office: [SIIIA MATH: Soluciones en ingeniería](http://www.siiia.com.mx)
 - :classical_building: [Universidad Michoacana de San Nicolás de Hidalgo](http://www.umich.mx)
 - :microscope: Numerical Methods & Computational Mathematics
 - :email: gerardo.tinoco@umich.mx
 - :globe_with_meridians: [ORCID](https://orcid.org/0000-0003-3119-770X)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**Dr. José Gerardo Tinoco Ruíz** :mexico:
+<img src="Public/docs/Images/JGTR1.jpg" width="100%">
+- :office: [SIIIA MATH: Soluciones en ingeniería](http://www.siiia.com.mx)
+- :classical_building: [Universidad Michoacana de San Nicolás de Hidalgo](http://www.umich.mx)
+- :microscope: Applied Mathematics & Scientific Computing
+- :email: jose.gerardo.tinoco@umich.mx
+
+</td>
+<td width="33%">
+
+**Dra. Elia Mercedes Alonso Guzmán** :mexico:
+<img src="Public/docs/Images/EMAG.jpg" width="100%">
+- :office: [SIIIA MATH: Soluciones en ingeniería](http://www.siiia.com.mx)
+- :classical_building: [Universidad Michoacana de San Nicolás de Hidalgo](http://www.umich.mx)
+- :microscope: Civil Engineering & Materials Science
+- :email: elia.alonso@umich.mx
+
+</td>
+<td width="33%">
+
+**Dr. Heriberto Arias Rojas** :mexico:
+<img src="Public/docs/Images/Harias.webp" width="100%">
+- :office: [SIIIA MATH: Soluciones en ingeniería](http://www.siiia.com.mx)
+- :classical_building: [Universidad Michoacana de San Nicolás de Hidalgo](http://www.umich.mx)
+- :microscope: Computer Science & Data Analysis
+- :email: heriberto.arias@umich.mx
 
 </td>
 </tr>
@@ -171,6 +221,45 @@ streamlit run Central_app.py
 3. Guzmán-Torres, J. A., Domínguez-Mota, F. J., Tinoco-Guerrero, G., Román-Gutierrez, R., Arias-Rojas, H., & Naser, M. Z. (2024). Explainable computational intelligence method to evaluate the damage on concrete surfaces compared to traditional visual inspection techniques. In Interpretable Machine Learning for the Analysis, Design, Assessment, and Informed Decision Making for Civil Infrastructure (pp. 77-109). Woodhead Publishing. [DOI: 10.1016/B978-0-12-824073-1.00010-1](https://doi.org/10.1016/B978-0-12-824073-1.00010-1)
 
 4. Guzmán-Torres, J. A., Domínguez-Mota, F. J., Alonso-Guzmán, E. M., Tinoco-Guerrero, G., & Martínez-Molina, W. (2024). ConcreteXAI: A multivariate dataset for concrete strength prediction via deep-learning-based methods. Data in Brief, 53, 110218. [DOI: 10.1016/j.dib.2024.110218](https://doi.org/10.1016/j.dib.2024.110218)
+
+
+---
+
+## :memo: Citation
+
+If you use this software in your research, please cite the following publication:
+
+**Guzmán-Torres, J. A., Domínguez-Mota, F. J., Tinoco-Guerrero, G., Tinoco-Ruíz, J. G., & Alonso-Guzmán, E. M. (2024).** *Extreme fine-tuning and explainable AI model for non-destructive prediction of concrete compressive strength, the case of ConcreteXAI dataset.* **Advances in Engineering Software**, 192, 103630. [DOI: 10.1016/j.advengsoft.2024.103630](https://doi.org/10.1016/j.advengsoft.2024.103630)
+
+BibTeX:
+```bibtex
+@article{guzman2024extreme,
+  title={Extreme fine-tuning and explainable AI model for non-destructive prediction of concrete compressive strength, the case of ConcreteXAI dataset},
+  author={Guzm{\'a}n-Torres, Jos{\'e} Alberto and Dom{\'i}nguez-Mota, Francisco Javier and Tinoco-Guerrero, Gerardo and Tinoco-Ru{\'i}z, Jos{\'e} Gerardo and Alonso-Guzm{\'a}n, Elia Mercedes},
+  journal={Advances in Engineering Software},
+  volume={192},
+  pages={103630},
+  year={2024},
+  publisher={Elsevier},
+  doi={10.1016/j.advengsoft.2024.103630}
+}
+```
+
+## :handshake: Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## :clap: Acknowledgments
+
+We would like to thank:
+- **Universidad Michoacana de San Nicolás de Hidalgo (UMSNH)** for the institutional support.
+- **SIIIA MATH: Soluciones en Ingeniería** for the research collaboration.
 
 ---
 
