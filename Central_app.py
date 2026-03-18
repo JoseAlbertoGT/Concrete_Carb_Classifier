@@ -10,6 +10,7 @@ from Utilities import set_page_configuration
 from streamlit_lottie import st_lottie
 from Utilities import load_lottiefile
 from Utilities import background
+from visitor_counter import render_visitor_counter
 
 # -------------------- Cleaning the terminal -------------------- #
 # os.system('cls')
@@ -193,6 +194,9 @@ with st.expander(label="Classify an image:"):
             result_model_test = run_classifier(img=img_test)
 
 # -------------------- Space for dubugging in terminal -------------------- #
+
+# Render the visitor counter and statistics panel
+render_visitor_counter()
 
 st.html("<h5 style='text-align:center'> © Concrete Carbonation classifier. All rights reserved. </h5>")
 
