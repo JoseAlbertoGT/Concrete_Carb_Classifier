@@ -12,7 +12,7 @@ from Utilities import load_lottiefile
 from Utilities import background
 
 # -------------------- Cleaning the terminal -------------------- #
-os.system('cls')
+# os.system('cls')
 
 # -------------------- Defining main functions -------------------- #
 def verify_environment():
