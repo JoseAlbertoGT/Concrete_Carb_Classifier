@@ -87,7 +87,6 @@ Concrete Carbonation Classifier is a next-generation Streamlit web application t
 - **Framework**: Streamlit 1.20+  
 - **Animations**: Lottie via `streamlit_lottie`  
 - **Styling**: Custom sidebar backgrounds and logos embedded with Markdown/HTML  
-- **Security**: Simple password protection (default code: `concrete2025`) on sidebar  
 
 ---
 

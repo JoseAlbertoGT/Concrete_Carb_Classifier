@@ -25,19 +25,6 @@ def verify_environment():
             st.sidebar.warning("Running on CPU only")
     return True
 
-def authenticate_user():
-    if "authenticated" not in st.session_state:
-        st.session_state.authenticated = False
-    
-    if not st.session_state.authenticated:
-        with st.sidebar:
-            password = st.text_input("Enter access code:", type="password")
-            if password == "concrete2025":  # Simple password
-                st.session_state.authenticated = True
-            elif password:
-                st.error("Invalid access code")
-    return st.session_state.authenticated
-
 def load_image_tf(filename):
     try:
         # loading the image
@@ -135,6 +122,8 @@ with st.sidebar.expander(label=":orange[About the Author]"):
 	st.markdown("🧑‍🔬 [:green[ResearcGate]](https://www.researchgate.net/profile/Jose-Guzman-Torres)")
 	st.markdown("📚 [:green[Scholar Google]](https://scholar.google.com.mx/citations?user=lZA3PrIAAAAJ&hl=es&authuser=1)")
 	st.markdown("👷 [:green[Linkedin]](https://www.linkedin.com/in/jos%C3%A9-alberto-guzm%C3%A1n-torres-b4224372/)")
+	st.markdown("---")
+	st.markdown("🔬 [:orange[Conoce al equipo de investigación]](/Team_Research)")
 
 with st.sidebar.expander(label=":orange[Sponsors]"):
 	st.markdown("[:green[SECIHTI]](https://conahcyt.mx/)")
@@ -146,65 +135,62 @@ with st.sidebar.container():
 	st.image("Images/logo_siiia_b.png")
 
 # -------------------- Setting the interface of the webapp -------------------- #
-if authenticate_user():
-    with st.container(border=True):
-        st.subheader("Description", divider=True)
-        st.html("""<h6 style = 'text-align:justify'> Concrete Carbonation Classifier is an advanced web app designed for engineers and researchers in civil engineering,
-        specializing in the automated classification of concrete samples based on carbonation damage. 
-        Powered by artificial intelligence, this tool employs a convolutional neural network (CNN) model
-        trained to recognize patterns in concrete samples and determine their level of carbonation. 
-        By simply uploading an image of a concrete sample, users can quickly receive accurate assessments 
-        of carbonation presence, aiding in the early detection of structural vulnerabilities and supporting 
-        maintenance decisions. This tool offers an efficient, AI-driven approach to monitoring concrete integrity,
-        helping extend the lifespan of infrastructure through precise diagnostics. </h6>
-            """)
+with st.container(border=True):
+    st.subheader("Description", divider=True)
+    st.html("""<h6 style = 'text-align:justify'> Concrete Carbonation Classifier is an advanced web app designed for engineers and researchers in civil engineering,
+    specializing in the automated classification of concrete samples based on carbonation damage. 
+    Powered by artificial intelligence, this tool employs a convolutional neural network (CNN) model
+    trained to recognize patterns in concrete samples and determine their level of carbonation. 
+    By simply uploading an image of a concrete sample, users can quickly receive accurate assessments 
+    of carbonation presence, aiding in the early detection of structural vulnerabilities and supporting 
+    maintenance decisions. This tool offers an efficient, AI-driven approach to monitoring concrete integrity,
+    helping extend the lifespan of infrastructure through precise diagnostics. </h6>
+        """)
 
-    with st.expander(label="Classify an image:"):
-        image = st.file_uploader(label="📂 Upload a concrete sample image:")
-        st.write(":orange[Warning: In order to avoid mistakes, make sure that your image is about a concrete sample!!]")
-        col1, col2, col3, = st.columns(3, vertical_alignment="center")
-        with col2:
-            if image is not None:
-                st.image(image=image, caption="Uploaded image", use_container_width=True)
+with st.expander(label="Classify an image:"):
+    image = st.file_uploader(label="📂 Upload a concrete sample image:")
+    st.write(":orange[Warning: In order to avoid mistakes, make sure that your image is about a concrete sample!!]")
+    col1, col2, col3, = st.columns(3, vertical_alignment="center")
+    with col2:
+        if image is not None:
+            st.image(image=image, caption="Uploaded image", use_container_width=True)
 
-        with st.form(key="Image_classifier"):
-            submit_button = st.form_submit_button(label="Classify", type="primary")
-                
-            if submit_button:
-                if image is None:
-                    st.write(":red[Please, upload an image or select a testing image!!] 😅")
-                else:
-                    img = load_image_tf(filename=image)
-                    st.html("<h3 style='color:green'> Results: </h3>")
-                    result_model = run_classifier(img=img)
-        
-        # Mapping for testing images: display name -> file path
-        testing_images = {
-            "Sample Image 1": "Images/Sample images/Sample_.jpg",
-            "Sample Image 2": "Images/Sample images/Sample_image (1).jpg",
-            "Sample Image 3": "Images/Sample images/Sample_image (2).jpg",
-            "Sample Image 4": "Images/Sample images/Sample_image (3).jpg"
-        }
-        
-        with st.container(key="testing_images", border=True):
-            option = st.selectbox(
-                placeholder="Choose an option",
-                label="📂 Select testing image:", index=None,
-                options=list(testing_images.keys())
-            )
+    with st.form(key="Image_classifier"):
+        submit_button = st.form_submit_button(label="Classify", type="primary")
             
-            if option:
-                selected_image_path = testing_images[option]
-                col1, col2, col3, = st.columns(3, vertical_alignment="center")
-                with col2:
-                    st.image(image=selected_image_path, caption="Testing image", use_container_width=True)
-                    
-                    img_test = load_image_tf(filename=selected_image_path)
-                
+        if submit_button:
+            if image is None:
+                st.write(":red[Please, upload an image or select a testing image!!] 😅")
+            else:
+                img = load_image_tf(filename=image)
                 st.html("<h3 style='color:green'> Results: </h3>")
-                result_model_test = run_classifier(img=img_test)
-else:
-    st.warning("Please enter access code to use the classifier")
+                result_model = run_classifier(img=img)
+    
+    # Mapping for testing images: display name -> file path
+    testing_images = {
+        "Sample Image 1": "Images/Sample images/Sample_.jpg",
+        "Sample Image 2": "Images/Sample images/Sample_image (1).jpg",
+        "Sample Image 3": "Images/Sample images/Sample_image (2).jpg",
+        "Sample Image 4": "Images/Sample images/Sample_image (3).jpg"
+    }
+    
+    with st.container(key="testing_images", border=True):
+        option = st.selectbox(
+            placeholder="Choose an option",
+            label="📂 Select testing image:", index=None,
+            options=list(testing_images.keys())
+        )
+        
+        if option:
+            selected_image_path = testing_images[option]
+            col1, col2, col3, = st.columns(3, vertical_alignment="center")
+            with col2:
+                st.image(image=selected_image_path, caption="Testing image", use_container_width=True)
+                
+                img_test = load_image_tf(filename=selected_image_path)
+            
+            st.html("<h3 style='color:green'> Results: </h3>")
+            result_model_test = run_classifier(img=img_test)
 
 # -------------------- Space for dubugging in terminal -------------------- #
 
