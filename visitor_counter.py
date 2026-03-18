@@ -2,9 +2,7 @@ import sqlite3
 import datetime
 import os
 import shutil
-import pandas as pd
 import streamlit as st
-import plotly.express as px
 from streamlit_javascript import st_javascript
 
 DB_NAME = "visitor_stats.db"
@@ -76,10 +74,6 @@ def get_stats():
     c.execute('SELECT COUNT(*) FROM visits WHERE visit_date >= ?', (start_of_week.strftime('%Y-%m-%d'),))
     week_visits = c.fetchone()[0]
     
-    # Trend data (last 7 days)
-    seven_days_ago = today - datetime.timedelta(days=6)
-    query = 'SELECT visit_date, COUNT(*) as count FROM visits WHERE visit_date >= ? GROUP BY visit_date ORDER BY visit_date'
-    df_trend = pd.read_sql_query(query, conn, params=(seven_days_ago.strftime('%Y-%m-%d'),))
     conn.close()
     
     # Calculate growth rate
@@ -88,16 +82,7 @@ def get_stats():
     else:
         growth_rate = ((today_visits - yesterday_visits) / yesterday_visits) * 100
         
-    # Fill missing days in trend
-    date_list = [seven_days_ago + datetime.timedelta(days=x) for x in range(7)]
-    df_dates = pd.DataFrame({'visit_date': [d.strftime('%Y-%m-%d') for d in date_list]})
-    if not df_trend.empty:
-        df_trend = pd.merge(df_dates, df_trend, on='visit_date', how='left').fillna(0)
-    else:
-        df_trend = df_dates
-        df_trend['count'] = 0
-        
-    return total_visits, today_visits, week_visits, growth_rate, df_trend
+    return total_visits, today_visits, week_visits, growth_rate
 
 def render_visitor_counter():
     # Initialize DB
@@ -106,19 +91,11 @@ def render_visitor_counter():
     # JS to check local storage
     js_code = """
     (function() {
-        var status = "unknown";
-        if (!window.sessionStorage.getItem('concrete_session_visited')) {
-            window.sessionStorage.setItem('concrete_session_visited', 'true');
-            if (!window.localStorage.getItem('concrete_app_visited')) {
-                window.localStorage.setItem('concrete_app_visited', 'true');
-                status = "new";
-            } else {
-                status = "recurring";
-            }
-        } else {
-            status = "already_counted";
+        if (!window.localStorage.getItem('concrete_app_visited')) {
+            window.localStorage.setItem('concrete_app_visited', 'true');
+            return "new";
         }
-        return status;
+        return "recurring";
     })()
     """
     visitor_status = st_javascript(js_code)
@@ -129,7 +106,7 @@ def render_visitor_counter():
         log_visit(is_new)
         
     # Get stats
-    total, today, week, growth, df_trend = get_stats()
+    total, today, week, growth = get_stats()
     
     # UI Design
     st.markdown("""
@@ -248,25 +225,4 @@ def render_visitor_counter():
             </div>
         """, unsafe_allow_html=True)
         
-    st.markdown("<br>", unsafe_allow_html=True)
-    
-    # Trend Chart
-    fig = px.line(df_trend, x='visit_date', y='count', 
-                  title='Tendencia de Visitas (Últimos 7 días)',
-                  labels={'visit_date': 'Fecha', 'count': 'Número de Visitas'},
-                  markers=True)
-    
-    fig.update_layout(
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        margin=dict(l=20, r=20, t=40, b=20),
-        font=dict(family="Arial, sans-serif"),
-        title_font=dict(size=18, color='#2e7d32'),
-        xaxis=dict(showgrid=False),
-        yaxis=dict(showgrid=True, gridcolor='rgba(128,128,128,0.2)')
-    )
-    fig.update_traces(line_color='#2e7d32', line_width=3, marker=dict(size=8, color='#ff9800'))
-    
-    st.plotly_chart(fig, use_container_width=True)
-    
     st.markdown('</div>', unsafe_allow_html=True)
