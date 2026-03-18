@@ -205,7 +205,7 @@ with st.container(height=200, border=False):
 	with col2:
 		col1, col2, col3= st.columns(3, vertical_alignment="center", gap="small")
 		with col1:
-			st.image(image="Images/logotipo_SCyT.svg", width=400, use_container_width=True)
+			st.image(image="Images/logotipo_SCyT.svg", width=480, use_container_width=True)
 		with col2:		
 			st.image(image="Images/logo_siiia_w.png", width=400, use_container_width=True)
 		with col3:
